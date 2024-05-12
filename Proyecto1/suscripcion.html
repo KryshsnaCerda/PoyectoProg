@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet"href="style.css">
+    <body style="color:white; text-align: center;"></body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="inicio.html">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="principal.html">Principal</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="catalogo.html">Catalogo</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="suscripcion.html">Suscripción</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="carro.html">Carro</a>
+</li>
+</ul>
+      <h4>Suscribite</h4>
+      <form method="POST" action="#">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre"></input>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido"></input>
+        <br>
+        <label for="rut">Rut</label>
+        <input type="text" id="rut" name="rut"></input>
+        <br>
+        <label for="correo">Correo</label>
+        <input type="text" id="correo" name="correo"></input>
+        <fieldset>
+          <p>¿Seguro de querer suscribirte?</p>
+         <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
+         <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+        </fieldset>
+      </form>
+
+      <p>¿Que consigo?</p>
+      <fieldset>
+        <p id="susc">Al suscribirte seras la primera persona en conocer nuestras novedades y ofertas limitadas</p>
+      </fieldset>
+      <br>
+      <button type="button" id="btn-mostrar">Mostrar</button>
+      <button type="button" id="btn-ocultar">Ocultar</button>
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="main.js"></script>
+</body>
+</html>
