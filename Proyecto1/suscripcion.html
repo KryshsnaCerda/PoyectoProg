@@ -26,7 +26,31 @@
 </li>
 </ul>
       <h4>Suscribite</h4>
-      aqui
+      <form id="myForm" method="POST" action="#">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required></input><br>
+    
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" required></input><br>
+    
+        <label for="rut">Rut</label>
+        <input type="text" id="rut" name="rut" pattern="[0-9]{7,8}-[0-9Kk]{1}" required></input><br>
+    
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required></input><br>
+    
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="18" max="100" required></input><br>
+        <p>*Debes ser mayor de 18 años para suscribirte</p>
+    
+        <fieldset>
+            <p>¿Seguro de querer suscribirte?</p>
+            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
+            <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+        </fieldset>
+    
+        <button type="submit">Enviar</button>
+    </form>
       <p>¿Que consigo?</p>
       <fieldset>
         <p id="susc">Al suscribirte seras la primera persona en conocer nuestras novedades y ofertas limitadas</p>
