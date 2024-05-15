@@ -3,3 +3,7 @@ $("#btn-ocultar").click(function(){
 
 });
 
+$("#btn-mostrar").click(function(){
+    $("fieldset").show();
+
+});
