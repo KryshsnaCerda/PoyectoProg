@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tienda</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Importar dependencias de Bootstrap mediante CDN-->
-        <link rel="stylesheet" href="css/styles.css"> <!-- Importar archivo externo de CSS ('css/styles.css') -->
-    </head>
-    <body>
-        <h1>Carrito</h1>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link active" href="inicio.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="principal.html">Principal</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="catalogo.html">Catalogo</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="suscripcion.html">Suscripción</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="suscripcion.html">Carro</a>
-            </li>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!-- Importar dependencias de Bootstrap mediante CDN-->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Importar archivo externo de CSS ('css/styles.css') -->
+  </head>
+  <body>
+
+    <!-- Inicio de navbar con estilos dentro de la ruta: css/styles.css -->
+
+    <div class="header">
+      <div class="logo">
+        <a href="principal.html" style="text-decoration: none; color: black;"><h1>TU ESTILO</h1></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="carro.html" alt="Carrito de compras">Carrito</a>
+          </li>
+          <li>
+            <a href="catalogo.html" alt="Catalogo de productos">Catalogo</a>
+          </li>
+          <li>
+            <a href="suscripcion.html" alt="Suscripcion a nuestra plataforma">Suscripcion</a>
+          </li>
+          <li>
+            <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion"><button>Cerrar sesion</button></a>
+          </li>
         </ul>
-        <div class="grid">
-            <div class="productos">
-                <img src="img/polera1.jpg" width="300">
-                <p>$2240</p>
-            </div>
-            <button>Agregar al Carrito</button>
+      </nav>
+      <a onclick="openNav()" href="#" class="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </a>
+
+      <!-- Menu estilo hamburguesa desplegable para cuando la resolucion sea menor a 900px -->
+
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" href="#" class="close">&times;</a>
+        <div class="overlay-content">
+          <div class="menu-logo">
+            <h1>TU ESTILO</h1>
+            <br>
+          </div>
+          <a href="carro.html" alt="Carrito de compras">Carrito</a>
+          <a href="catalogo.html" alt="Catalogo de productos">Catalogo</a>
+          <a href="suscripcion.html" alt="Suscripcion a nuestra plataforma">Suscripcion</a>
+          <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion" style="padding-top: 20px;"><button>Cerrar sesion</button></a>
         </div>
-        <div class="productos">
-            <img src="img/polera2.avif" width="300">
-            <p>$6300</p>
-        </div>
-        <button>Agregar al Carrito</button>
-    </div>
-        <div class="productos">
-            <img src="img/poleron.jpg" width="300">
-            <p>$8990</p>
-        </div>
-        <button>Agregar al Carrito</button>
-    </div>
-        <div class="productos">
-            <img src="img/pantalon.webp" width="300">
-            <p>$12900</p>
-        </div>
-        <button>Agregar al Carrito</button>
-    </div>
-        <div class="productos">
-            <img src="img/top.jpg" width="300">
-            <p>$5500</p>
-        </div>
-        <button>Agregar al Carrito</button>
-    </div>
-    <div class="productos">
-        <img src="img/images.jpg" width="300">
-        <p>$8600</p>
-    </div>
-    <button>Agregar al Carrito</button>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> <!-- Importar scripts de jsdelivr, tambien de bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    </body>
+    <!-- Fin de navbar -->
+
+      <div class="grid">
+          <div class="productos">
+              <img src="img/polera1.jpg" width="300">
+              <p>$2240</p>
+          </div>
+          <button>Agregar al Carrito</button>
+      </div>
+      <div class="productos">
+          <img src="img/polera2.avif" width="300">
+          <p>$6300</p>
+      </div>
+      <button>Agregar al Carrito</button>
+  </div>
+      <div class="productos">
+          <img src="img/poleron.jpg" width="300">
+          <p>$8990</p>
+      </div>
+      <button>Agregar al Carrito</button>
+  </div>
+      <div class="productos">
+          <img src="img/pantalon.webp" width="300">
+          <p>$12900</p>
+      </div>
+      <button>Agregar al Carrito</button>
+  </div>
+      <div class="productos">
+          <img src="img/top.jpg" width="300">
+          <p>$5500</p>
+      </div>
+      <button>Agregar al Carrito</button>
+  </div>
+  <div class="productos">
+      <img src="img/images.jpg" width="300">
+      <p>$8600</p>
+  </div>
+  <button>Agregar al Carrito</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> <!-- Importar scripts de jsdelivr, tambien de bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
 </html>

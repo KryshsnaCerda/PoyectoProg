@@ -1,9 +1,28 @@
+/* Fuentes externas importadas al archivo .css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap');
+
+/* Estilo para todo el contenido del .html */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Estilo para la etiqueta <body> todos los .html */
+
 body {
     background-image: url(background.png);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.form-control{
+/* Estilos para partes de las validaciones y formularios*/
+
+.form-control {
     width: 100%;
     background: transparent;
     padding: 10px;
@@ -13,7 +32,7 @@ body {
     font-size: 18px;
 }
 
-.warnings{
+.warnings {
     width: 220px;
     text-align: left;
     color: red;
@@ -29,5 +48,173 @@ body {
 }
 
 .button:hover {
-    background-color: rgb(238, 234, 19);
+    background-color: rgba(238, 234, 19, 0);
+}
+
+/* Estilos para navbar */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 5px 10%;
+    background-color: rgb(252, 252, 203);
+    transition: all 0.8s ease-in-out 0s;
+
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.719);
+}
+
+.header .logo h1 {
+    cursor: pointer;
+    margin: auto;
+    transition: all 0.7s ease-in-out 0s;
+}
+
+.header .logo h1:hover {
+    color: rgb(54, 187, 42);
+    transform: scale(1.1);
+}
+
+.header .nav-links {
+    list-style: none;
+    margin: auto;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.header .nav-links a {
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    text-decoration: none;
+    transition:  all 0.7s ease-in-out 0s;
+}
+
+.header .nav-links a:hover {
+    font-weight: 600;
+    color: rgb(42, 187, 73);
+}
+
+.menu {
+    display: none;
+}
+
+.header .nav-button button{
+    background-color:rgba(255, 127, 127, 0.247) ;
+    font-weight: 200;
+    padding: 5px;
+    border-radius: 50px;
+    border-style: none;
+    transition: all 0.8s ease-in-out;
+}
+
+.header .nav-button button:hover{
+    background-color: rgba(187, 42, 42, 0.582);
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+.header .menu button {
+    background-color:rgba(127, 255, 133, 0.247) ;
+    font-weight: 200;
+    padding: 5px;
+    border-radius: 50px;
+    border-style: none;
+    transition: all 0.8s ease-in-out;
+}
+
+.header .menu button:hover{
+    background-color: rgba(54, 187, 42, 0.582);
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-links, .nav-button {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+    
+}
+
+/* Menu para que sea responsivo */
+
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    display: block;
+    padding: 0px;
+    font-size: 30px;
+    color: aliceblue;
+
+    font-weight: 200;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+    transform: scale(1.1);
+    font-weight: 600;
+    color: rgb(42, 187, 73);
+
+}
+
+.header .menu-logo h1 {
+    color: aliceblue;
+    cursor: pointer;
+    margin: auto;
+    transition: all 0.3s ease-in-out 0s;
+    font-weight: 1000;
+}
+
+.header .menu-logo h1:hover {
+    color: rgb(145, 255, 0);
+    transform: scale(1.1);
+}
+
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay {
+        font-size: 20px;
+    }
+    
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }

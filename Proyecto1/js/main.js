@@ -1,3 +1,5 @@
+/* Validacion de formulario para inicio.html */
+
 function validacion(){
     let email = document.getElementById("email");
     let pass = document.getElementById("pass");
@@ -39,4 +41,14 @@ function validacion(){
             window.location.href = 'principal.html';
         }
     })
+}
+
+/* Comportamiento del navbar al reducir el tamaño de la pantalla*/
+
+function openNav(){
+    document.getElementById("mobile-menu").style.width = "100%";
+}
+
+function closeNav(){
+    document.getElementById("mobile-menu").style.width = "0%";
 }
