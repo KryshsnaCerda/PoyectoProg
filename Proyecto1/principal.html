@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Importar archivo externo de CSS ('css/styles.css') -->
   </head>
   <body>
-
-    <!-- Inicio de navbar con estilos dentro de la ruta: css/styles.css -->
-
-    <div class="header">
+    <div class="header">   <!-- Inicio de navbar con estilos dentro de la ruta: css/styles.css -->
       <div class="logo">
         <a href="principal.html" style="text-decoration: none; color: black;"><h1>TU ESTILO</h1></a>
       </div>
@@ -28,11 +25,11 @@
             <a href="suscripcion.html" alt="Suscripcion a nuestra plataforma">Suscripcion</a>
           </li>
           <li>
-            <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion"><button>Cerrar sesion</button></a>
+            <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion">Cerrar sesion</a>
           </li>
         </ul>
       </nav>
-      <a onclick="openNav()" href="#" class="menu">
+      <a onclick="openNav()" href="#" class="menu-nav">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-list" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
         </svg>
@@ -49,20 +46,86 @@
           <a href="inicio.html" alt="Cerrar sesion" class="cerrarSesion">Cerrar sesion</a>
         </div>
       </div>
+    </div> <!-- Fin de navbar -->
+
+
+    <!-- Resto de la principal -->
+
+    <div class="body-container">
+      <section class="info-1-body"> <!-- Inicio de la 1ra seccion -->
+        <section class="carousel-section-1" style="background-color: #c9c5b8;"> <!-- Seccion para el carrousel-->
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="1000">
+                <a href="catalogo.html"><img src="img/clothes/modelos/1/modelo-1-1.jpg" width="420" class="img-fluid" alt="Modelo 1"></a>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <a href="catalogo.html"><img src="img/clothes/modelos/1/modelo-1-2.jpg" width="420" class="img-fluid" alt="Modelo 2"></a>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <a href="catalogo.html"><img src="img/clothes/modelos/1/modelo-1-3.jpg" width="420" class="img-fluid" alt="Modelo 3"></a>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <a href="catalogo.html"><img src="img/clothes/modelos/1/modelo-1-4.jpg" width="420" class="img-fluid" alt="Modelo 4"></a>
+              </div>
+            </div>
+          </div>
+        </section> <!-- Fin 1er carrousel -->
+      </section> <!-- Fin 1ra seccion -->
+      <section class="info-2-body">
+        <br><br>
+        <h1 style="color: rgb(0, 0, 0); font-family: sans-serif; font-weight: 600;">
+          TU ESTILO
+          <br> 
+          <br>
+          <span style="font-weight: 400;"> Disfruta de la mayor calidad de diseño y estilismo en un solo lugar <br><br></span>
+          <a href="catalogo.html"><img src="img/clothes/modelos/2/modelo-2-1.jpg" width="320" alt="Modelo 1"></a>
+          <a href="catalogo.html"><img src="img/clothes/modelos/2/modelo-2-4.jpg" width="320" alt="Modelo 2"></a> 
+          <a href="catalogo.html"><img src="img/clothes/modelos/2/modelo-2-3.png" width="320" alt="Modelo 3"></a>
+          <a href="catalogo.html"><img src="img/clothes/modelos/2/modelo-2-2.jpg" width="320" alt="Modelo 4"></a>
+        </h1>
+        <br><br>
+      </section>
     </div>
 
-    <!-- Fin de navbar -->
+    <footer class="footer"> <!-- Inicio de footer -->
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" target="_blank" href="https://www.facebook.com/DuocUC/?locale=es_LA">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" target="_blank" href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" target="_blank" href="https://www.instagram.com/duocuc_cl/?hl=es">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="carro.html">Carrito</a></li>
+        <li class="menu__item"><a class="menu__link" href="catalogo.html">Catalogo</a></li>
+        <li class="menu__item"><a class="menu__link" href="suscripcion.html">Suscripcion</a></li>
+        <li class="menu__item"><a class="menu__link" href="inicio.html">Cerrar sesion</a></li>
+      </ul>
+      <p style="margin-left: 35px;">&copy;2021 TU ESTILO | Todos los derechos reservados</p>
+    </footer> <!-- Fin del footer -->
 
-    <!-- Inicio de carrousel -->
-    
-    <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col">
-        </div>
-      </div>
-    </div>
-    
-    <script src="js/main.js"></script>
+    <!-- Importados todos los scripts necesarios -->
+
+    <script src="scripts/main.js"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 

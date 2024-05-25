@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Importar archivo externo de CSS ('css/styles.css') -->
   </head>
   <body>
-
-    <!-- Inicio de navbar con estilos dentro de la ruta: css/styles.css -->
-
-    <div class="header">
+    <div class="header">     <!-- Inicio de navbar con estilos dentro de la ruta: css/styles.css -->
       <div class="logo">
         <a href="principal.html" style="text-decoration: none; color: black;"><h1>TU ESTILO</h1></a>
       </div>
@@ -28,11 +25,11 @@
             <a href="suscripcion.html" alt="Suscripcion a nuestra plataforma">Suscripcion</a>
           </li>
           <li>
-            <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion"><button>Cerrar sesion</button></a>
+            <a href="inicio.html" class="nav-button" id="cerrarSesionButton" alt="Boton de cerrar sesion">Cerrar sesion</a>
           </li>
         </ul>
       </nav>
-      <a onclick="openNav()" href="#" class="menu">
+      <a onclick="openNav()" href="#" class="menu-nav">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-list" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
         </svg>
@@ -41,21 +38,15 @@
       <!-- Menu estilo hamburguesa desplegable para cuando la resolucion sea menor a 900px -->
 
       <div class="overlay" id="mobile-menu">
-        <a onclick="closeNav()" href="#" class="close">&times;</a>
+        <a onclick="closeNav()" href="#" class="close"">&times;</a>
         <div class="overlay-content">
-          <div class="menu-logo">
-            <h1>TU ESTILO</h1>
-            <br>
-          </div>
           <a href="carro.html" alt="Carrito de compras">Carrito</a>
           <a href="catalogo.html" alt="Catalogo de productos">Catalogo</a>
           <a href="suscripcion.html" alt="Suscripcion a nuestra plataforma">Suscripcion</a>
-          <a href="inicio.html" class="nav-button" alt="Boton de cerrar sesion" style="padding-top: 20px;"><button>Cerrar sesion</button></a>
+          <a href="inicio.html" alt="Cerrar sesion" class="cerrarSesion">Cerrar sesion</a>
         </div>
       </div>
-    </div>
-
-    <!-- Fin de navbar -->
+    </div>     <!-- Fin de navbar -->
 
       <div class="grid">
           <div class="productos">
@@ -94,13 +85,17 @@
   </div>
   <button>Agregar al Carrito</button>
   </div>
+    
+    <!-- Importados todos los scripts necesarios -->
 
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> <!-- Importar scripts de jsdelivr, tambien de bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
-  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>
