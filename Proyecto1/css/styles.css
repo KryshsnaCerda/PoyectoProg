@@ -164,7 +164,6 @@ body {
 
 .body-container {
     display: grid;
-    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
 }
@@ -196,31 +195,22 @@ body {
 
 /* Contenedores y estilos para la pagina de catalogo */
 
-.container-catalogo {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    justify-content: center;
-}
-
 .navbar-catalogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     padding: 10px;
     background-color: rgb(255, 255, 255);
-    
 }
 
 .navbar-catalogo .nav-links-catalogo{
     list-style: none;
+    text-align: center;
     margin: auto;
 }
 
 .navbar-catalogo .nav-links-catalogo li {
     display: inline-block;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 8px;
 }
 
 .navbar-catalogo .nav-links-catalogo a {
@@ -237,44 +227,26 @@ body {
     opacity: 1;
 }
 
-.menu-catalogo {
-    width: 100%;
-    height: 600px;
-    background: white;
-    color: black;
+.catalogo-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    border: 5px solid red; /* Testeando */
-    
+    justify-content: center;
+    text-align: center;
+    background-color: white;
 }
 
-.menu-carro {
-    width: 100%;
-    height: 600px;
-    background: white;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-    border: 5px solid red; /* Testeando */
+.catalogo-container .items {
+    width: 75%;
+    height: auto;
 }
 
-.menu-configuracion {
-    width: 100%;
-    height: 800px;
-    background: rgb(255, 255, 255);
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 5px solid red; /* Testeando */
+.catalogo-container .items img{
+    margin: 0px 20px 20px 20px;
+    width: 250px;
+    transition: all 0.5s;
+}
 
-    .box-conf {
-        width: 100%;
-    }
+.catalogo-container .items img:hover{
+    transform: scale(1.05);
 }
 
 /* Inicio de footer */
