@@ -49,14 +49,18 @@ function validacionSubscripcion(){
     let rut = document.getElementById("rut");
     let email = document.getElementById("email");
     let edad = document.getElementById("edad");
-    let terms = document.getElementById("terms");
+
+    let comprobar1 = false;
+    let comprobar2 = false;
+    let comprobar3 = false;
+    let comprobar4 = false;
+    let comprobar5 = false;
 
     let parrafo1 = document.getElementById("warnings1");
     let parrafo2 = document.getElementById("warnings2");
     let parrafo3 = document.getElementById("warnings3");
     let parrafo4 = document.getElementById("warnings4");
     let parrafo5 = document.getElementById("warnings5");
-    let parrafo6 = document.getElementById("warnings6");
 
     form.addEventListener("submit", e => {
         e.preventDefault()
@@ -65,8 +69,6 @@ function validacionSubscripcion(){
         let warningsC = "";
         let warningsD = "";
         let warningsF = "";
-        let warningsG = "";
-        let enviar = false;
         let regexEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,4})+$/;
 
         parrafo1.innerHTML = "";
@@ -74,66 +76,57 @@ function validacionSubscripcion(){
         parrafo3.innerHTML = "";
         parrafo4.innerHTML = "";
         parrafo5.innerHTML = "";
-        parrafo6.innerHTML = "";
 
 
         if(nombre.value.length < 1){
             warningsA = "Debes llenar este campo para enviar";
-            enviar = true;
+            parrafo1.innerHTML = warningsA;
             nombre.style.border = "solid 1px red";
         } else {
+            comprobar1 = true
             nombre.style.border = "solid 1px green";
         }
 
         if(apellido.value.length < 1){
             warningsB = "Debes llenar este campo para enviar";
-            enviar = true;
+            parrafo2.innerHTML = warningsB;
             apellido.style.border = "solid 1px red";
         } else {
+            comprobar2 = true
             apellido.style.border = "solid 1px green";
         }
 
         rut.value = rut.value.trim();
         if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rut.value)) {
             warningsC = "El RUT es inválido (Ingrese rut sin puntos y con guión)";
-            enviar = true;
+            parrafo3.innerHTML = warningsC;
             rut.style.border = "solid 1px red";
         } else {
+            comprobar3 = true
             rut.style.border = "solid 1px green";
         }
 
         if(!regexEmail.test(email.value)){
             warningsD = "El email no es valido";
-            entrar = true;
+            parrafo4.innerHTML = warningsD;
             email.style.border = "solid 1px red";
         } else {
+            comprobar4 = true
             email.style.border = "solid 1px green";
         }
 
         if(edad.value.length < 2){
             warningsF = "Debes llenar este campo para enviar";
-            enviar = true;
+            parrafo5.innerHTML = warningsF;
             edad.style.border = "solid 1px red";
         } else {
+            comprobar5 = true
             edad.style.border = "solid 1px green";
         }
 
-        if (!terms.checked) {
-            warningsG = "Debes aceptar los términos y condiciones";
-            enviar = false;
-            parrafo6.innerHTML = warningsG;
+        if(comprobar1 && comprobar2 && comprobar3 && comprobar4 && comprobar5) {
+            document.getElementById("successMessage").style.display = "inherit"
         }
-
-        if (!enviar) {
-            parrafo1.innerHTML = warningsA;
-            parrafo2.innerHTML = warningsB;
-            parrafo3.innerHTML = warningsC;
-            parrafo4.innerHTML = warningsD;
-            parrafo5.innerHTML = warningsF;
-        } else {
-            document.getElementById("successMessage").style.display = "none";
-        }
-
     })
 }
 
@@ -145,4 +138,18 @@ function openNav(){
 
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
+}
+
+/* Iniciar mapa de Google Maps */
+
+function iniciarMap(){
+    let coord = {lat:-33.033679616872696 ,lng: -71.53316599804108};
+    let map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+    });
+    let marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
 }

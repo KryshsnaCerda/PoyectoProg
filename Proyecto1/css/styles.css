@@ -34,13 +34,24 @@ body {
 }
 
 .header .logo h1 {
+    color: #ca9a8c;
     cursor: pointer;
     margin: auto;
     transition: all 0.3s ease-in-out 0s;
 }
 
 .header .logo h1:hover {
-    color: rgb(208, 203, 252);
+    color: #ca9a8c;
+    font-weight: 800;
+}
+
+.header .nav-links img {
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.header .nav-links img:hover {
+    opacity: 1;
     transform: scale(1.1);
 }
 
@@ -57,29 +68,19 @@ body {
 
 .header .nav-links a {
     margin: auto;
-    color: black;
-    font-weight: 400;
+    color: #ca9a8c85;
+    font-weight: 600;
     text-decoration: none;
     transition:  all 0.3s ease-in-out 0s;
 }
 
 .header .nav-links a:hover {
-    font-weight: 600;
-    color: rgb(208, 203, 252);
+    font-weight: 650;
+    color: #ca9a8c;
 }
 
 .menu-nav {
     display: none;
-}
-
-#cerrarSesionButton{
-    width: 32px;
-    transition: all 0.5s ease-in-out;
-}
-
-#cerrarSesionButton:hover{
-    font-weight: 800;
-    color: rgb(158, 59, 59);
 }
 
 .header .menu-nav button {
@@ -95,16 +96,6 @@ body {
     background-color: rgba(54, 187, 42, 0.582);
     font-weight: 600;
     padding: 10px 25px;
-}
-
-@media screen and (max-width: 900px) {
-    .nav-links, .nav-button {
-        display: none;
-    }
-    .menu-nav {
-        display: inherit;
-    }
-    
 }
 
 /* Estilos para menu tipo hamburguesa */
@@ -149,7 +140,7 @@ body {
 .header .overlay a:focus {
     transform: scale(1.1);
     font-weight: 600;
-    color: rgb(208, 203, 252);
+    color: #a8bc9c;
 
 }
 
@@ -168,27 +159,12 @@ body {
     font-size: 65px;
 }
 
-.header .overlay .cerrarSesion:hover {
-    color: rgb(255, 73, 73);
-}
 
-@media screen and (max-height:450px) {
-    .header .overlay {
-        font-size: 20px;
-    }
-    
-    .header .overlay .close {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
-/* Contenedor post-navbar */
+/* Contenedores y estilos para la pagina principal */
 
 .body-container {
     display: grid;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
 }
@@ -208,29 +184,115 @@ body {
 }
 
 .info-2-body img {
-    margin: 1px;
-    opacity: 0.5;
-    padding: 20px;
+    margin: 10px;
+    opacity: 0.7;
     transition: all 0.4s ease-in-out 0s;
 }
 
 .info-2-body img:hover {
-    transform: scale(1.2);
-    opacity: 11;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Contenedores y estilos para la pagina de catalogo */
+
+.container-catalogo {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-catalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.navbar-catalogo .nav-links-catalogo{
+    list-style: none;
+    margin: auto;
+}
+
+.navbar-catalogo .nav-links-catalogo li {
+    display: inline-block;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar-catalogo .nav-links-catalogo a {
+    margin: auto;
+    color: black;
+    opacity: 0.3;
+    font-weight: 100;
+    text-decoration: none;
+    transition:  all 0.3s ease-in-out 0s;
+}
+
+.navbar-catalogo .nav-links-catalogo a:hover {
+    font-weight: 400;
+    opacity: 1;
+}
+
+.menu-catalogo {
+    width: 100%;
+    height: 600px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border: 5px solid red; /* Testeando */
+    
+}
+
+.menu-carro {
+    width: 100%;
+    height: 600px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border: 5px solid red; /* Testeando */
+}
+
+.menu-configuracion {
+    width: 100%;
+    height: 800px;
+    background: rgb(255, 255, 255);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid red; /* Testeando */
+
+    .box-conf {
+        width: 100%;
+    }
 }
 
 /* Inicio de footer */
 
 .footer {
-  position: relative;
+  position: absolute;
   width: 100%;
-  background: #807d74;
+  background: #4d4b45;
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.footer-info {
+    border:  2px solid red;
 }
 
 .social-icon,
@@ -256,6 +318,7 @@ body {
   transition: 0.5s;
 }
 .social-icon__link:hover {
+  color: #a8bc9c;
   transform: translateY(-10px);
 }
 
@@ -271,6 +334,7 @@ body {
 }
 
 .menu__link:hover {
+  color: #a8bc9c;
   opacity: 1;
 }
 
@@ -288,7 +352,7 @@ body {
     background: transparent;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #fada26;
+    border: 1px solid #000000;
     font-family: 'calibri';
     font-size: 18px;
 }
@@ -310,4 +374,39 @@ body {
 
 .button:hover {
     background-color: rgba(238, 234, 19, 0);
+}
+
+/* Tamaño google map api */
+
+#map {
+	height: 320px;
+	width: 320px;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-links, .nav-button {
+        display: none;
+    }
+    .menu-nav {
+        display: inherit;
+    }
+    
+}
+
+@media screen and (max-width: 610px){
+    .cards {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay {
+        font-size: 20px;
+    }
+    
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
